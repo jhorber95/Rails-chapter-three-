@@ -67,6 +67,15 @@ Rails.application.configure do
   # Use this on the cloud IDE.
   config.action_mailer.default_url_options = { host: host, protocol: 'http' }
   # Use this if developing on localhost.
-  # config.action_mailer.default_url_options = { host: host, protocol: 'http' }
+  config.action_mailer.default_url_options = { host: host, protocol: 'http' }
+  ActionMailer::Base.smtp_settings = {
+    address: 'smtp.gmail.com',
+    port: '587',
+    authentication: :plain,
+    user_name: 'contacto@swingmeet.club',
+    password: 'Geluvaju721',
+    domain: 'gmail.com',
+    enable_starttls_auto: true
+  }
 
 end
